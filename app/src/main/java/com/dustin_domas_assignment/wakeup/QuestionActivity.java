@@ -89,7 +89,7 @@ public class QuestionActivity extends AppCompatActivity {
 
         //randomly picking a question and its options from the list
         Random rand = new Random();
-        int questID = rand.nextInt(9)+1;
+        int questID = rand.nextInt(17)+1;
         if (list_of_questions != null && list_of_questions.size() != 0) {
             activeQuestion = list_of_questions.get(questID);
             Log.i("set List isnt null ", ""+activeQuestion.getANSWER());
