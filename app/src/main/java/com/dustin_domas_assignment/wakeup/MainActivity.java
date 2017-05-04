@@ -219,56 +219,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
 
-    //Create action bar and assign menu layout
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-
-    //Set up buttons for action bar
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        if(item.getItemId() == R.id.about){
-
-            ((TextView)
-                    new AlertDialog.Builder(MainActivity.this,R.style.DialogBox)
-                            //title is needed to create AlertDialio, this one will not show anything
-                            .setTitle(Html.fromHtml("<h1> &nbsp; WakeUP     &nbsp;   </h1>"))
-                            .setMessage(Html.fromHtml("<h2>Dustin Lobato</h2>"
-                                    + "<h2>Domas Budrys</h2>"
-                                    +"<br>"
-                                    + "<h3>Alarm Sound Options:</h3>"
-                                    + "<font color='#FF7F27'> <a href=\"http://soundbible.com/\">soundbible.com</a> </font>"
-                                    + "<h3>Icons:</h3>"
-                                    + "<font color='#FF7F27'><a href=\"https://icons8.com/\">icons8.com</a> </font>"
-                                    +"<br>"
-                                    + "<h3>Background:</h3>"
-                                    + "<font color='#FF7F27'><a href=\"https://pixabay.com/en/yellow-red-blue-green-293875/\">pixabay.com</a> </font>"
-                                    +"<br>"
-                                    + "<font color='#FF7F27'><a href=\"http://stackoverflow.com/questions/10095335/android-link-in-dialog\">Stackoverflow</a> </font>"
-                            ))
-                            .show()
-
-                            .findViewById(android.R.id.message))
-                    .setMovementMethod(LinkMovementMethod.getInstance());
-
-
-        }// end of if
-        else if (item.getItemId() == R.id.exit){
-
-            finish();
-            //System.exit(0);
-        }// end of else if
-
-        return(super.onOptionsItemSelected(item));
-    }// end of onOptionsItemSelected
-
-
-
 
 
 
